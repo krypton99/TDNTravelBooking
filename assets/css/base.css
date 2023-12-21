@@ -9,18 +9,18 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
-    --primary-color: #EE4D2D;
-    --primary-color-rgba: rgb(238, 77, 45);
+    --text-color-secondary: #84829A;
+    --primary-color: #DF6951;
     --border-color: #dbdbdb;
     --growth-from: 0.7;
     --growth-to: 1;
-    --header-height: 120px;
-    --navbar-height: 32px;
+    --header-height: 61em;
+    --navbar-height: 12.75em;
 }
 
 html {
-    font-size: 62.5%;
-    line-height: 1.6rem;
+    font-size: 1em;
+    line-height: 1em;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
@@ -28,6 +28,8 @@ html {
 /* Responsive */
 .grid {
     width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .grid__full-width {
@@ -51,10 +53,28 @@ html {
     width: 16.6667%;
 }
 
+.grid__column-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.grid__column-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25%;
+}
+
 .grid__column-2-4 {
     padding-left: 5px;
     padding-right: 5px;
     width: 20%;
+}
+
+.grid__column-4-8 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 40%;
 }
 
 .grid__column-10 {
@@ -62,3 +82,19 @@ html {
     padding-right: 5px;
     width: 83.3333%;
 }
+
+/* Button */
+
+.btn {
+    min-width: 9.5em;
+    height: 3.625em;
+    border-radius: 10px;
+    border: none;
+    color: var(--white-color);
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+}
+
+

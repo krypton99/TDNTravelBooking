@@ -1,13 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Booking</title>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/home-page.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.5.1-web/css/all.min.css" class="">
+    <script src="./assets/test.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
+
 <body>
-    
+    <header class="home-header">
+        <div class="wrapper">
+            <div class="grid">
+                <div class="header-container">
+                    <div class="header__navbar">
+                        <div class="header__navbar-logo">
+                            <svg class="header__logo-img" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"
+                                viewBox="0 0 1500 935">
+                                <g transform="matrix(1,0,0,1,-0.9090909090909918,0.3785425101215196)"><svg
+                                        viewBox="0 0 396 247" data-background-color="#dfdad6"
+                                        preserveAspectRatio="xMidYMid meet" height="935" width="1500"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="tight-bounds"
+                                            transform="matrix(1,0,0,1,0.2400000000000091,-0.09999999999999432)"><svg
+                                                viewBox="0 0 395.52 247.2" height="247.2" width="395.52">
+                                                <g><svg></svg></g>
+                                                <g><svg viewBox="0 0 395.52 247.2" height="247.2" width="395.52">
+                                                        <g transform="matrix(1,0,0,1,75.54432,83.494272)"><svg
+                                                                viewBox="0 0 244.43135999999998 80.211456"
+                                                                height="80.211456" width="244.43135999999998">
+                                                                <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                        height="80.211456" width="244.43135999999998">
+                                                                        <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                                height="80.211456"
+                                                                                width="244.43135999999998">
+                                                                                <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                                        height="80.211456"
+                                                                                        width="244.43135999999998">
+                                                                                        <g id="textblocktransform"><svg
+                                                                                                viewBox="0 0 244.43135999999998 80.211456"
+                                                                                                height="80.211456"
+                                                                                                width="244.43135999999998"
+                                                                                                id="textblock">
+                                                                                                <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                                                        height="80.211456"
+                                                                                                        width="244.43135999999998">
+                                                                                                        <g
+                                                                                                            transform="matrix(1,0,0,1,0,0)">
+                                                                                                            <svg width="244.43135999999998"
+                                                                                                                viewBox="1.37 -32.76 100.58 33"
+                                                                                                                height="80.211456"
+                                                                                                                data-palette-color="#e33e33">
+                                                                                                                <path
+                                                                                                                    d="M10.86-32.13Q14.21-32.03 16.36-32.03 18.51-32.03 21.88-32.13 25.24-32.23 27.1-32.23L27.1-32.23Q28.32-32.23 30.47-32.76L30.47-32.76 31.4-25.78Q31.05-25.44 30.22-25.44L30.22-25.44Q29.79-25.44 29.74-25.68L29.74-25.68Q29.05-28.42 28.05-29.22 27.05-30.03 24.27-30.03L24.27-30.03Q19.09-30.03 18.9-29.3L18.9-29.3Q18.46-27.73 18.46-24.41L18.46-24.41 18.46-6.79Q18.46-3.96 18.9-2.25L18.9-2.25Q18.99-1.9 20.26-1.59 21.53-1.27 22.02-1.27L22.02-1.27Q22.22-1.27 22.22-0.54L22.22-0.54Q22.22-0.15 22.12 0.15L22.12 0.15Q17.24-0.1 16.46-0.1L16.46-0.1Q16.21-0.1 10.6 0.15L10.6 0.15Q10.4-0.05 10.4-0.59L10.4-0.59Q10.4-1.27 10.6-1.27L10.6-1.27Q11.23-1.27 12.48-1.56 13.72-1.86 13.87-2.25L13.87-2.25Q14.21-3.56 14.21-6.59L14.21-6.59 14.21-24.27Q14.21-28.52 13.77-29.3L13.77-29.3Q13.38-30.03 8.5-30.03L8.5-30.03Q5.71-30.03 4.71-29.22 3.71-28.42 3.03-25.68L3.03-25.68Q2.98-25.44 2.54-25.44L2.54-25.44Q1.71-25.44 1.37-25.78L1.37-25.78 2.29-32.76Q4.44-32.23 5.66-32.23L5.66-32.23Q7.52-32.23 10.86-32.13ZM40.33-32.03L40.33-32.03Q42.19-32.03 45.04-32.08 47.9-32.13 48.83-32.13L48.83-32.13Q56.78-32.13 61.23-27.44 65.67-22.75 65.67-16.41L65.67-16.41Q65.67-9.33 61.18-4.59 56.69 0.15 48.78 0.15L48.78 0.15Q48.19 0.15 45.29 0.05 42.38-0.05 40.43 0L40.43 0 34.52 0.15Q34.37 0 34.37-0.59L34.37-0.59Q34.37-1.27 34.52-1.27L34.52-1.27Q35.15-1.27 36.4-1.61 37.64-1.95 37.89-2.39L37.89-2.39Q38.23-2.98 38.23-6.98L38.23-6.98 38.23-25.44Q38.23-28.32 37.89-29.64L37.89-29.64Q37.74-30.03 36.45-30.37 35.15-30.71 34.52-30.71L34.52-30.71Q34.32-30.71 34.32-31.3L34.32-31.3Q34.32-31.93 34.52-32.13L34.52-32.13Q37.06-32.03 40.33-32.03ZM42.48-26.12L42.48-26.12 42.48-6.79Q42.48-4.74 43.21-3.08L43.21-3.08Q43.41-2.59 45.82-2.34 48.24-2.1 49.56-2.1L49.56-2.1Q60.79-2.1 60.79-16.6L60.79-16.6Q60.79-22.17 57.83-26.07 54.88-29.98 49.22-29.98L49.22-29.98 48.97-29.98Q43.7-29.98 43.11-29.2L43.11-29.2Q42.48-28.32 42.48-26.12ZM94.82-10.4L94.82-25.59Q94.82-28.56 94.48-29.88L94.48-29.88Q94.33-30.27 92.79-30.64 91.25-31.01 90.62-31.01L90.62-31.01Q90.42-31.01 90.42-31.57 90.42-32.13 90.62-32.32L90.62-32.32Q91.25-32.28 93.16-32.15 95.06-32.03 96.38-32.03L96.38-32.03Q97.65-32.03 99.58-32.18 101.51-32.32 101.85-32.32L101.85-32.32Q101.95-32.03 101.95-31.59L101.95-31.59Q101.95-31.01 101.75-31.01L101.75-31.01Q101.26-31.01 99.63-30.62 97.99-30.22 97.9-29.88L97.9-29.88Q97.5-28.37 97.5-25.34L97.5-25.34 97.5-6.79Q97.5-3.76 97.65 0.05L97.65 0.05Q97.46 0.24 96.72 0.24L96.72 0.24Q95.89 0.24 95.11-0.88L95.11-0.88 76.17-27.73 76.17-6.88Q76.17-3.66 76.51-2.34L76.51-2.34Q76.61-2 78.14-1.64 79.68-1.27 80.17-1.27L80.17-1.27Q80.32-1.27 80.34-0.68 80.37-0.1 80.27 0.15L80.27 0.15Q75.39-0.1 74.65-0.1L74.65-0.1 69.04 0.15Q68.89 0 68.89-0.59L68.89-0.59Q68.89-1.27 69.04-1.27L69.04-1.27Q69.72-1.27 71.26-1.64 72.8-2 72.94-2.44L72.94-2.44Q73.43-3.71 73.43-7.03L73.43-7.03 73.43-26.22Q73.43-28.61 73.09-29.88L73.09-29.88Q72.94-30.27 71.43-30.59 69.92-30.91 69.23-30.91L69.23-30.91Q69.04-30.91 69.04-31.52 69.04-32.13 69.23-32.32L69.23-32.32Q73.04-32.23 74.21-32.23L74.21-32.23Q76.75-32.23 78.12-32.32L78.12-32.32Q79.93-29 94.67-8.4L94.67-8.4Q94.82-9.23 94.82-10.4L94.82-10.4Z"
+                                                                                                                    opacity="1"
+                                                                                                                    transform="matrix(1,0,0,1,0,0)"
+                                                                                                                    fill="#fff"
+                                                                                                                    class="wordmark-text-0"
+                                                                                                                    data-fill-palette-color="primary"
+                                                                                                                    id="text-0">
+                                                                                                                </path>
+                                                                                                            </svg>
+                                                                                                        </g>
+                                                                                                    </svg></g>
+                                                                                            </svg></g>
+                                                                                    </svg></g>
+                                                                            </svg></g>
+                                                                    </svg></g>
+                                                            </svg></g>
+                                                        <g>
+                                                            <path
+                                                                d="M245.816 0c68.262 0 123.6 55.338 123.6 123.6 0 68.262-55.338 123.6-123.6 123.6-50.632 0-94.154-30.445-113.257-74.026h3.961c18.867 41.53 60.709 70.409 109.296 70.409 66.265 0 119.983-53.718 119.983-119.983 0-66.265-53.718-119.983-119.983-119.983-48.587 0-90.428 28.88-109.296 70.409l-3.961 0c19.103-43.582 62.625-74.026 113.257-74.026z"
+                                                                fill="#DF6951" stroke="transparent"
+                                                                data-fill-palette-color="tertiary"></path>
+                                                        </g>
+                                                    </svg></g>
+                                                <defs></defs>
+                                            </svg>
+                                            <rect width="395.52" height="247.2" fill="#DF6951" stroke="none"
+                                                visibility="hidden"></rect>
+                                        </g>
+                                    </svg></g>
+                            </svg>
+                        </div>
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item">
+                                <a href="" class="header__navbar-item-link header__navbar-link--active">Trang chủ</a>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="" class="header__navbar-item-link">Giới thiệu về nav</a>
+                            </li>
+                            <li class="header__navbar-item header__navbar-item--has-service">
+                                <a href="" class="header__navbar-item-link">Dịch vụ</a>
+                                <i class="header__navbar-item-icon fa-solid fa-sort-down"></i>
+                                <!-- Service box menu -->
+                                <div class="service-box">
+                                    <ul class="service-box-list">
+                                        <li class="service-box-item">
+                                            <a href="" class="service-box-item-link">Gói tuần trăng mật</a>
+                                        </li>
+                                        <li class="service-box-item">
+                                            <a href="" class="service-box-item-link">Gói đi tour</a>
+                                        </li>
+                                        <li class="service-box-item">
+                                            <a href="" class="service-box-item-link">Sự kiện âm nhạc</a>
+                                        </li>
+                                        <li class="service-box-item">
+                                            <a href="" class="service-box-item-link">Team building</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="" class="header__navbar-item-link">Xem thêm</a>
+                            </li>
+                        </ul>
+                        <button class="btn btn--primary">Liên hệ</button>
+                    </div>
+                    <div class="header-hero">
+                        <div class="header-hero__label">
+                            <p>No matter where</p>
+                            <p>you're going to, we'll</p>
+                            <p>take you there</p>
+                        </div>
+                        <div class="header-hero__form">
+                            <ul class="header-hero__form-list">
+                                <li class="header-hero__form-item header-hero__form-item--separate">
+                                    <a href="" class="header-hero__form-item-link">Điểm đến?</a>
+                                </li>
+                                <li class="header-hero__form-item header-hero__form-item--separate">
+                                    <a href="" class="header-hero__form-item-link">Loại hình</a>
+                                    <i class="header-hero__form-item-icon fa-solid fa-angle-down"></i>
+                                </li>
+                                <li class="header-hero__form-item">
+                                    <a href="" class="header-hero__form-item-link">Thời gian</a>
+                                    <i class="header-hero__form-item-icon fa-solid fa-angle-down"></i>
+                                </li>
+                            </ul>
+                            <button class="header-hero__form-btn btn btn--primary">Gửi</button>
+                        </div>
+                        <div class="header-hero__form-booked">
+                            <ul class="header-hero__form-booked-user-list">
+                                <li class="header-hero__form-booked-user-item">
+                                    <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+                                        alt="" class="header-hero__form-booked-user-img">
+                                </li>
+                                <li class="header-hero__form-booked-user-item">
+                                    <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+                                        alt="" class="header-hero__form-booked-user-img">
+                                </li>
+                                <li class="header-hero__form-booked-user-item">
+                                    <img src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg"
+                                        alt="" class="header-hero__form-booked-user-img">
+                                </li>
+                                <li class="header-hero__form-booked-user-item">
+                                    <i
+                                        class="header-hero__form-booked-user-img header-hero__form-booked-user-icon fa-solid fa-plus"></i>
+                                </li>
+                            </ul>
+                            <p class="header-hero__form-booked-info">2,500 người đã đặt Sự kiện Tommorowland trong 24
+                                giờ qua</p>
+                        </div>
+                    </div>
+                    <div class="header-pagination">
+                        <ul class="header-pagination-list-page">
+                            <li class="header-pagination-page header-pagination-page--active"></li>
+                            <li class="header-pagination-page"></li>
+                            <li class="header-pagination-page"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="home-body">
+        <div class="header-partner">
+            <div class="grid">
+                <div class="header-partner-wrapper">
+                    <ul class="header-partner__list">
+                        <li class="header-partner__list-item">
+                            <img src="./assets/image/Turkish_Airlines_logo_2019_compact.svg" alt="Airbnb"
+                                class="header-partner__list-item-img">
+                        </li>
+                        <li class="header-partner__list-item">
+                            <img src="./assets/image/Emirates-Symbol.png" alt="Airbnb"
+                                class="header-partner__list-item-img">
+                        </li>
+                        <li class="header-partner__list-item">
+                            <img src="./assets/image/Airbnb.svg" alt="Airbnb" class="header-partner__list-item-img">
+                        </li>
+                        <li class="header-partner__list-item">
+                            <img src="./assets/image/Vietnam_Airlines.svg" alt="Airbnb"
+                                class="header-partner__list-item-img">
+                        </li>
+                        <li class="header-partner__list-item">
+                            <img src="./assets/image/Trivago.svg" alt="Airbnb" class="header-partner__list-item-img">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="home-category">
+            <div class="grid">
+                <h3 class="home-category__label">CATEGORY</h3>
+                <h3 class="home-category__title">CHÚNG TÔI MANG LẠI DỊCH VỤ TỐT NHẤT</h3>
+                <div class="grid__row">
+                    <a href="" class="home-category-link grid__column-3">
+                        <div class="home-category__item home-category-link--active">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5998/5998991.png" alt=""
+                                class="home-category__item-img">
+                            <h3 class="home-category__item-label">Guided Tours</h3>
+                            <span class="home-category__item-desc">sunt qui repellat saepe quo velit aperiam id aliquam
+                                placeat.</span>
+                        </div>
+                    </a>
+                    <a href="" class="home-category-link grid__column-3">
+                        <div class="home-category__item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3284/3284607.png" alt=""
+                                class="home-category__item-img">
+                            <h3 class="home-category__item-label">Guided Tours</h3>
+                            <span class="home-category__item-desc">sunt qui repellat saepe quo velit aperiam id aliquam
+                                placeat.</span>
+                        </div>
+                    </a>
+                    <a href="" class="home-category-link grid__column-3">
+                        <div class="home-category__item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3284/3284607.png" alt=""
+                                class="home-category__item-img">
+                            <h3 class="home-category__item-label">Guided Tours</h3>
+                            <span class="home-category__item-desc">sunt qui repellat saepe quo velit aperiam id aliquam
+                                placeat.</span>
+                        </div>
+                    </a>
+                    <a href="" class="home-category-link grid__column-3">
+                        <div class="home-category__item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3284/3284607.png" alt=""
+                                class="home-category__item-img">
+                            <h3 class="home-category__item-label">Guided Tours</h3>
+                            <span class="home-category__item-desc">sunt qui repellat saepe quo velit aperiam id aliquam
+                                placeat.</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="honey-moon">
+            <div class="grid">
+                <div class="honey-moon-wrapper">
+                    <div class="honey-moon__image-container">
+                        <span class="honey-moon__image-border">
+                            <img src="./assets/image/honeymoon-crop.jpg" alt="" class="honey-moon__image-main">
+                        </span>
+                        <img src="assets/image/honeymoon-2.jpg" alt=""
+                            class="honey-moon__image-sub honey-moon__image-sub--l">
+                        <img src="assets/image/honeymoon-3.jpg" alt="" class="honey-moon__image-sub">
+                        <img src="assets/image/honeymoon-4.jpg" alt=""
+                            class="honey-moon__image-sub honey-moon__image-sub--s">
+                    </div>
+                    <div class="banner__content">
+                        <h3 class="banner__content-label">HONEYMOON SPECIALS</h3>
+                        <h3 class="banner__content-title">Our Romantic Tropical Destinations</h3>
+                        <p class="banner__content-desc">Et labore harum non nobis ipsum eum molestias mollitia et
+                            corporis praesentium a laudantium internos. Non quis eius quo eligendi corrupti et fugiat
+                            nulla qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!</p>
+                        <button class="banner__btn btn btn--primary">View package</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="favorite-booking">
+            <div class="grid">
+                <div class="favorite-booking-wrapper">
+                    <div class="grid__row">
+                        <div class="grid__column-6">
+                            <div class="favorite-booking-content banner__content">
+                                <h3 class="banner__content-label">FAST & EASY</h3>
+                                <h3 class="banner__content-title">Get Your Favorite Resort Bookings</h3>
+                                <ul class="banner__content-list">
+                                    <li class="banner__content-item">
+                                        <img src="assets/image/Group 7.svg" alt="" class="banner__content-item-img">
+                                        <span class="banner__content-item-info">
+                                            <h3 class="banner__content-item-title">Choose destination</h3>
+                                            Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit. Urna, tortor tempus.
+                                        </span>
+                                    </li>
+                                    <li class="banner__content-item">
+                                        <img src="assets/image/Group 11.svg" alt="" class="banner__content-item-img">
+                                        <span class="banner__content-item-info">
+                                            <h3 class="banner__content-item-title">Check Availability</h3>
+                                            Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit. Urna, tortor tempus.
+                                        </span>
+                                    </li>
+                                    <li class="banner__content-item">
+                                        <img src="assets/image/Group 12.svg" alt="" class="banner__content-item-img">
+                                        <span class="banner__content-item-info">
+                                            <h3 class="banner__content-item-title">Let's go</h3>
+                                            Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit. Urna, tortor tempus.
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid__column-6">
+                            <div class="favorite-booking__banner">
+                                <img src="assets/image/airplane.png" alt=""
+                                    class="favorite-booking__item favorite-booking__banner-back">
+                                <div class="favorite-booking__item-tour-card tour-card">
+                                    <img src="https://cdn.aarp.net/content/dam/aarp/travel/Domestic/2021/12/1140-oahu-hero.jpg"
+                                        alt="" class="tour-card__img">
+                                    <h3 class="tour-card__title">Trip to Hawaii</h3>
+                                    <div class="tour-card__info">
+                                        <span class="tour-card__info-date">14-19 June</span>
+                                        <span class="tour-card__info-author">by JR Martin</span>
+                                    </div>
+                                    <ul class="tour-card__tag-list">
+                                        <li class="tour-card__tag-item">
+                                            <i class="tour-card__tag-icon fa-solid fa-leaf"></i>
+                                        </li>
+                                        <li class="tour-card__tag-item">
+                                            <i class="tour-card__tag-icon fa-regular fa-map"></i>
+                                        </li>
+                                        <li class="tour-card__tag-item">
+                                            <i class="tour-card__tag-icon fa-solid fa-location-arrow"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="tour-card__desc">
+                                        <i class="tour-card__desc-icon fa-regular fa-building"></i>
+                                        <span class="tour-card__desc-text">60 people are interested</span>
+                                        <i class="tour-card__desc-icon fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="favorite-booking__item-trip-progress trip-progress">
+                                    <img src="https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateRome_Hero_shutterstock789412159.jpg"
+                                        alt="" class="trip-progress__avatar">
+                                    <div class="trip-progress__body">
+                                        <span class="trip-progress__body-status">Ongoing</span>
+                                        <span class="trip-progress__body-title">Trip to rome</span>
+                                        <span class="trip-progress__body-progress">
+                                            <span class="trip-progress__body-progress-percent">40%</span>
+                                            completed
+                                        </span>
+                                        <div class="trip-progress__body-progress-bar">
+                                            <div class="trip-progress__body-progress-bar--has-percent"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trending-tour">
+            <div class="grid">
+                <h3 class="trending-tour__label">TRENDY</h3>
+                <h3 class="trending-tour__title">Our Trending Tour </br> Pakages</h3>
+                <div class="grid__row">
+                    <div class="grid__column-3">
+                        <div class="tour-product">
+                            <img src="https://s3-alpha-sig.figma.com/img/36b0/5c3c/026f2348866fd24aea3c1431b6cdfd36?Expires=1704067200&Signature=i4ko~XRTU5-D46JfK~wPAQ8n18yaVFiTj17TcuhgpPXfk9JSIeh-CV1WsEQZLE~l1ObGXqeUmwtiB4fx0h8b1V7vVux6A4EoyYBq1ai4yS08YD9ifD1bCC~T2CRSLQ0RQiz9etBc0iDa-8PpenZgwD5TvM8cFixo9lTl0QRO6ercGZ1ZIfdbWiyyevLWdoGVWwnnC6ZjfRaneeYw0tFOl1LhjPqXQ9TpAjWy1n9XK1DnWvmIqF~lqsxZ-P7ShI8SvVgeLrkoOF1LqfuquWLvOoaEQAmmcQGdjtW-pKvriEOJA-LcEU0eQvKKcj5Ottrnfn4uEybUeT5zmWG1QEYppw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__avatar">
+                            <img src="https://s3-alpha-sig.figma.com/img/691c/12cf/cf2572a842580727799ce9cc62500262?Expires=1704067200&Signature=LwHeXrOu~ocHa4h~APl9iNSVqpovv7m5iBq8FwEnbxrEq5vVXFDphiHK5fHWDwGXq7tPoemyQ7DRwgaBVRxS9YU1Dp8xktbjpRO4X-c7XqPpq7QPI2~q~wXn7P3-rPlXT0LLDtqP6Kenf1on2SDJbDoQVAv3UfxRf0nvXI3yoZ-Tgru8dDNZtin6wqCiWuQ9yPcrwow9NpeuC5WcQ3-GgExMtBSrX~ZLbku6TTHOm-L~OHMgD~GzBeKfOjddRJAw1Qz047bCdiqYIpoKfkgGsqN-bPC3sV51Q1M6aSmoet8EPYzMwsM8hmm1FQbSJ0BvQT2DtkkV5kYO86KAq6D5bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__nation">
+                            <div class="tour-product__info">
+                                <div class="tour-product__info-days">
+                                    <i class="tour-product__info-days-icon fa-regular fa-calendar"></i>
+                                    <span class="tour-product__info-days-label">8 Days</span>
+                                </div>
+                                <div class="tour-product__info-people">
+                                    <i class="tour-product__info-people-icon fa-regular fa-user"></i>
+                                    <span class="tour-product__info-people-label">25 Peoples Going</span>
+                                </div>
+                            </div>
+                            <div class="tour-product__info-2">
+                                <h3 class="tour-product__info-2-country">Switzerland</h3>
+                                <div class="tour-product__info-2-rate">
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="tour-product__location">
+                                <i class="tour-product__location-icon fa-solid fa-location-dot"></i>
+                                <span class="tour-product__location-label">Europe</span>
+                            </div>
+                            <div class="tour-product__price">
+                                <span class="tour-product__price-origin">1,000 $</span>
+                                <span class="tour-product__price-discount">1,200 $</span>
+                            </div>
+                            <p class="tour-product__desc">Nam exercitationem commodi et ducimus quia in dolore animi sit
+                                mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia
+                                et corporis praesentium a laudantium internos.</p>
+                            <button class="tour-product__tbn btn btn--primary">Explore now</button>
+                        </div>
+                    </div>
+                    <div class="grid__column-3">
+                        <div class="tour-product">
+                            <img src="https://s3-alpha-sig.figma.com/img/36b0/5c3c/026f2348866fd24aea3c1431b6cdfd36?Expires=1704067200&Signature=i4ko~XRTU5-D46JfK~wPAQ8n18yaVFiTj17TcuhgpPXfk9JSIeh-CV1WsEQZLE~l1ObGXqeUmwtiB4fx0h8b1V7vVux6A4EoyYBq1ai4yS08YD9ifD1bCC~T2CRSLQ0RQiz9etBc0iDa-8PpenZgwD5TvM8cFixo9lTl0QRO6ercGZ1ZIfdbWiyyevLWdoGVWwnnC6ZjfRaneeYw0tFOl1LhjPqXQ9TpAjWy1n9XK1DnWvmIqF~lqsxZ-P7ShI8SvVgeLrkoOF1LqfuquWLvOoaEQAmmcQGdjtW-pKvriEOJA-LcEU0eQvKKcj5Ottrnfn4uEybUeT5zmWG1QEYppw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__avatar">
+                            <img src="https://s3-alpha-sig.figma.com/img/691c/12cf/cf2572a842580727799ce9cc62500262?Expires=1704067200&Signature=LwHeXrOu~ocHa4h~APl9iNSVqpovv7m5iBq8FwEnbxrEq5vVXFDphiHK5fHWDwGXq7tPoemyQ7DRwgaBVRxS9YU1Dp8xktbjpRO4X-c7XqPpq7QPI2~q~wXn7P3-rPlXT0LLDtqP6Kenf1on2SDJbDoQVAv3UfxRf0nvXI3yoZ-Tgru8dDNZtin6wqCiWuQ9yPcrwow9NpeuC5WcQ3-GgExMtBSrX~ZLbku6TTHOm-L~OHMgD~GzBeKfOjddRJAw1Qz047bCdiqYIpoKfkgGsqN-bPC3sV51Q1M6aSmoet8EPYzMwsM8hmm1FQbSJ0BvQT2DtkkV5kYO86KAq6D5bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__nation">
+                            <div class="tour-product__info">
+                                <div class="tour-product__info-days">
+                                    <i class="tour-product__info-days-icon fa-regular fa-calendar"></i>
+                                    <span class="tour-product__info-days-label">8 Days</span>
+                                </div>
+                                <div class="tour-product__info-people">
+                                    <i class="tour-product__info-people-icon fa-regular fa-user"></i>
+                                    <span class="tour-product__info-people-label">25 Peoples Going</span>
+                                </div>
+                            </div>
+                            <div class="tour-product__info-2">
+                                <h3 class="tour-product__info-2-country">Switzerland</h3>
+                                <div class="tour-product__info-2-rate">
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="tour-product__location">
+                                <i class="tour-product__location-icon fa-solid fa-location-dot"></i>
+                                <span class="tour-product__location-label">Europe</span>
+                            </div>
+                            <div class="tour-product__price">
+                                <span class="tour-product__price-origin">1,000 $</span>
+                                <span class="tour-product__price-discount">1,200 $</span>
+                            </div>
+                            <p class="tour-product__desc">Nam exercitationem commodi et ducimus quia in dolore animi sit
+                                mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia
+                                et corporis praesentium a laudantium internos.</p>
+                            <button class="tour-product__tbn btn btn--primary">Explore now</button>
+                        </div>
+                    </div>
+                    <div class="grid__column-3">
+                        <div class="tour-product">
+                            <img src="https://s3-alpha-sig.figma.com/img/36b0/5c3c/026f2348866fd24aea3c1431b6cdfd36?Expires=1704067200&Signature=i4ko~XRTU5-D46JfK~wPAQ8n18yaVFiTj17TcuhgpPXfk9JSIeh-CV1WsEQZLE~l1ObGXqeUmwtiB4fx0h8b1V7vVux6A4EoyYBq1ai4yS08YD9ifD1bCC~T2CRSLQ0RQiz9etBc0iDa-8PpenZgwD5TvM8cFixo9lTl0QRO6ercGZ1ZIfdbWiyyevLWdoGVWwnnC6ZjfRaneeYw0tFOl1LhjPqXQ9TpAjWy1n9XK1DnWvmIqF~lqsxZ-P7ShI8SvVgeLrkoOF1LqfuquWLvOoaEQAmmcQGdjtW-pKvriEOJA-LcEU0eQvKKcj5Ottrnfn4uEybUeT5zmWG1QEYppw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__avatar">
+                            <img src="https://s3-alpha-sig.figma.com/img/691c/12cf/cf2572a842580727799ce9cc62500262?Expires=1704067200&Signature=LwHeXrOu~ocHa4h~APl9iNSVqpovv7m5iBq8FwEnbxrEq5vVXFDphiHK5fHWDwGXq7tPoemyQ7DRwgaBVRxS9YU1Dp8xktbjpRO4X-c7XqPpq7QPI2~q~wXn7P3-rPlXT0LLDtqP6Kenf1on2SDJbDoQVAv3UfxRf0nvXI3yoZ-Tgru8dDNZtin6wqCiWuQ9yPcrwow9NpeuC5WcQ3-GgExMtBSrX~ZLbku6TTHOm-L~OHMgD~GzBeKfOjddRJAw1Qz047bCdiqYIpoKfkgGsqN-bPC3sV51Q1M6aSmoet8EPYzMwsM8hmm1FQbSJ0BvQT2DtkkV5kYO86KAq6D5bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__nation">
+                            <div class="tour-product__info">
+                                <div class="tour-product__info-days">
+                                    <i class="tour-product__info-days-icon fa-regular fa-calendar"></i>
+                                    <span class="tour-product__info-days-label">8 Days</span>
+                                </div>
+                                <div class="tour-product__info-people">
+                                    <i class="tour-product__info-people-icon fa-regular fa-user"></i>
+                                    <span class="tour-product__info-people-label">25 Peoples Going</span>
+                                </div>
+                            </div>
+                            <div class="tour-product__info-2">
+                                <h3 class="tour-product__info-2-country">Switzerland</h3>
+                                <div class="tour-product__info-2-rate">
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="tour-product__location">
+                                <i class="tour-product__location-icon fa-solid fa-location-dot"></i>
+                                <span class="tour-product__location-label">Europe</span>
+                            </div>
+                            <div class="tour-product__price">
+                                <span class="tour-product__price-origin">1,000 $</span>
+                                <span class="tour-product__price-discount">1,200 $</span>
+                            </div>
+                            <p class="tour-product__desc">Nam exercitationem commodi et ducimus quia in dolore animi sit
+                                mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia
+                                et corporis praesentium a laudantium internos.</p>
+                            <button class="tour-product__tbn btn btn--primary">Explore now</button>
+                        </div>
+                    </div>
+                    <div class="grid__column-3">
+                        <div class="tour-product">
+                            <img src="https://s3-alpha-sig.figma.com/img/36b0/5c3c/026f2348866fd24aea3c1431b6cdfd36?Expires=1704067200&Signature=i4ko~XRTU5-D46JfK~wPAQ8n18yaVFiTj17TcuhgpPXfk9JSIeh-CV1WsEQZLE~l1ObGXqeUmwtiB4fx0h8b1V7vVux6A4EoyYBq1ai4yS08YD9ifD1bCC~T2CRSLQ0RQiz9etBc0iDa-8PpenZgwD5TvM8cFixo9lTl0QRO6ercGZ1ZIfdbWiyyevLWdoGVWwnnC6ZjfRaneeYw0tFOl1LhjPqXQ9TpAjWy1n9XK1DnWvmIqF~lqsxZ-P7ShI8SvVgeLrkoOF1LqfuquWLvOoaEQAmmcQGdjtW-pKvriEOJA-LcEU0eQvKKcj5Ottrnfn4uEybUeT5zmWG1QEYppw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__avatar">
+                            <img src="https://s3-alpha-sig.figma.com/img/691c/12cf/cf2572a842580727799ce9cc62500262?Expires=1704067200&Signature=LwHeXrOu~ocHa4h~APl9iNSVqpovv7m5iBq8FwEnbxrEq5vVXFDphiHK5fHWDwGXq7tPoemyQ7DRwgaBVRxS9YU1Dp8xktbjpRO4X-c7XqPpq7QPI2~q~wXn7P3-rPlXT0LLDtqP6Kenf1on2SDJbDoQVAv3UfxRf0nvXI3yoZ-Tgru8dDNZtin6wqCiWuQ9yPcrwow9NpeuC5WcQ3-GgExMtBSrX~ZLbku6TTHOm-L~OHMgD~GzBeKfOjddRJAw1Qz047bCdiqYIpoKfkgGsqN-bPC3sV51Q1M6aSmoet8EPYzMwsM8hmm1FQbSJ0BvQT2DtkkV5kYO86KAq6D5bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt="" class="tour-product__nation">
+                            <div class="tour-product__info">
+                                <div class="tour-product__info-days">
+                                    <i class="tour-product__info-days-icon fa-regular fa-calendar"></i>
+                                    <span class="tour-product__info-days-label">8 Days</span>
+                                </div>
+                                <div class="tour-product__info-people">
+                                    <i class="tour-product__info-people-icon fa-regular fa-user"></i>
+                                    <span class="tour-product__info-people-label">25 Peoples Going</span>
+                                </div>
+                            </div>
+                            <div class="tour-product__info-2">
+                                <h3 class="tour-product__info-2-country">Switzerland</h3>
+                                <div class="tour-product__info-2-rate">
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i
+                                        class="tour-product__info-2-rate-icon tour-product__info-2-rate-icon--active fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                    <i class="tour-product__info-2-rate-icon fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="tour-product__location">
+                                <i class="tour-product__location-icon fa-solid fa-location-dot"></i>
+                                <span class="tour-product__location-label">Europe</span>
+                            </div>
+                            <div class="tour-product__price">
+                                <span class="tour-product__price-origin">1,000 $</span>
+                                <span class="tour-product__price-discount">1,200 $</span>
+                            </div>
+                            <p class="tour-product__desc">Nam exercitationem commodi et ducimus quia in dolore animi sit
+                                mollitia amet id quod eligendi. Et labore harum non nobis ipsum eum molestias mollitia
+                                et corporis praesentium a laudantium internos.</p>
+                            <button class="tour-product__tbn btn btn--primary">Explore now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <div class="footer__column">
+                            <div class="logo header__navbar-logo">
+                                <svg class="header__logo-img" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"
+                                    viewBox="0 0 1500 935">
+                                    <g transform="matrix(1,0,0,1,-0.9090909090909918,0.3785425101215196)"><svg
+                                            viewBox="0 0 396 247" data-background-color="#dfdad6"
+                                            preserveAspectRatio="xMidYMid meet" height="935" width="1500"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="tight-bounds"
+                                                transform="matrix(1,0,0,1,0.2400000000000091,-0.09999999999999432)"><svg
+                                                    viewBox="0 0 395.52 247.2" height="247.2" width="395.52">
+                                                    <g><svg></svg></g>
+                                                    <g><svg viewBox="0 0 395.52 247.2" height="247.2" width="395.52">
+                                                            <g transform="matrix(1,0,0,1,75.54432,83.494272)"><svg
+                                                                    viewBox="0 0 244.43135999999998 80.211456"
+                                                                    height="80.211456" width="244.43135999999998">
+                                                                    <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                            height="80.211456"
+                                                                            width="244.43135999999998">
+                                                                            <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                                    height="80.211456"
+                                                                                    width="244.43135999999998">
+                                                                                    <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                                            height="80.211456"
+                                                                                            width="244.43135999999998">
+                                                                                            <g id="textblocktransform">
+                                                                                                <svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                                                    height="80.211456"
+                                                                                                    width="244.43135999999998"
+                                                                                                    id="textblock">
+                                                                                                    <g><svg viewBox="0 0 244.43135999999998 80.211456"
+                                                                                                            height="80.211456"
+                                                                                                            width="244.43135999999998">
+                                                                                                            <g
+                                                                                                                transform="matrix(1,0,0,1,0,0)">
+                                                                                                                <svg width="244.43135999999998"
+                                                                                                                    viewBox="1.37 -32.76 100.58 33"
+                                                                                                                    height="80.211456"
+                                                                                                                    data-palette-color="#e33e33">
+                                                                                                                    <path
+                                                                                                                        d="M10.86-32.13Q14.21-32.03 16.36-32.03 18.51-32.03 21.88-32.13 25.24-32.23 27.1-32.23L27.1-32.23Q28.32-32.23 30.47-32.76L30.47-32.76 31.4-25.78Q31.05-25.44 30.22-25.44L30.22-25.44Q29.79-25.44 29.74-25.68L29.74-25.68Q29.05-28.42 28.05-29.22 27.05-30.03 24.27-30.03L24.27-30.03Q19.09-30.03 18.9-29.3L18.9-29.3Q18.46-27.73 18.46-24.41L18.46-24.41 18.46-6.79Q18.46-3.96 18.9-2.25L18.9-2.25Q18.99-1.9 20.26-1.59 21.53-1.27 22.02-1.27L22.02-1.27Q22.22-1.27 22.22-0.54L22.22-0.54Q22.22-0.15 22.12 0.15L22.12 0.15Q17.24-0.1 16.46-0.1L16.46-0.1Q16.21-0.1 10.6 0.15L10.6 0.15Q10.4-0.05 10.4-0.59L10.4-0.59Q10.4-1.27 10.6-1.27L10.6-1.27Q11.23-1.27 12.48-1.56 13.72-1.86 13.87-2.25L13.87-2.25Q14.21-3.56 14.21-6.59L14.21-6.59 14.21-24.27Q14.21-28.52 13.77-29.3L13.77-29.3Q13.38-30.03 8.5-30.03L8.5-30.03Q5.71-30.03 4.71-29.22 3.71-28.42 3.03-25.68L3.03-25.68Q2.98-25.44 2.54-25.44L2.54-25.44Q1.71-25.44 1.37-25.78L1.37-25.78 2.29-32.76Q4.44-32.23 5.66-32.23L5.66-32.23Q7.52-32.23 10.86-32.13ZM40.33-32.03L40.33-32.03Q42.19-32.03 45.04-32.08 47.9-32.13 48.83-32.13L48.83-32.13Q56.78-32.13 61.23-27.44 65.67-22.75 65.67-16.41L65.67-16.41Q65.67-9.33 61.18-4.59 56.69 0.15 48.78 0.15L48.78 0.15Q48.19 0.15 45.29 0.05 42.38-0.05 40.43 0L40.43 0 34.52 0.15Q34.37 0 34.37-0.59L34.37-0.59Q34.37-1.27 34.52-1.27L34.52-1.27Q35.15-1.27 36.4-1.61 37.64-1.95 37.89-2.39L37.89-2.39Q38.23-2.98 38.23-6.98L38.23-6.98 38.23-25.44Q38.23-28.32 37.89-29.64L37.89-29.64Q37.74-30.03 36.45-30.37 35.15-30.71 34.52-30.71L34.52-30.71Q34.32-30.71 34.32-31.3L34.32-31.3Q34.32-31.93 34.52-32.13L34.52-32.13Q37.06-32.03 40.33-32.03ZM42.48-26.12L42.48-26.12 42.48-6.79Q42.48-4.74 43.21-3.08L43.21-3.08Q43.41-2.59 45.82-2.34 48.24-2.1 49.56-2.1L49.56-2.1Q60.79-2.1 60.79-16.6L60.79-16.6Q60.79-22.17 57.83-26.07 54.88-29.98 49.22-29.98L49.22-29.98 48.97-29.98Q43.7-29.98 43.11-29.2L43.11-29.2Q42.48-28.32 42.48-26.12ZM94.82-10.4L94.82-25.59Q94.82-28.56 94.48-29.88L94.48-29.88Q94.33-30.27 92.79-30.64 91.25-31.01 90.62-31.01L90.62-31.01Q90.42-31.01 90.42-31.57 90.42-32.13 90.62-32.32L90.62-32.32Q91.25-32.28 93.16-32.15 95.06-32.03 96.38-32.03L96.38-32.03Q97.65-32.03 99.58-32.18 101.51-32.32 101.85-32.32L101.85-32.32Q101.95-32.03 101.95-31.59L101.95-31.59Q101.95-31.01 101.75-31.01L101.75-31.01Q101.26-31.01 99.63-30.62 97.99-30.22 97.9-29.88L97.9-29.88Q97.5-28.37 97.5-25.34L97.5-25.34 97.5-6.79Q97.5-3.76 97.65 0.05L97.65 0.05Q97.46 0.24 96.72 0.24L96.72 0.24Q95.89 0.24 95.11-0.88L95.11-0.88 76.17-27.73 76.17-6.88Q76.17-3.66 76.51-2.34L76.51-2.34Q76.61-2 78.14-1.64 79.68-1.27 80.17-1.27L80.17-1.27Q80.32-1.27 80.34-0.68 80.37-0.1 80.27 0.15L80.27 0.15Q75.39-0.1 74.65-0.1L74.65-0.1 69.04 0.15Q68.89 0 68.89-0.59L68.89-0.59Q68.89-1.27 69.04-1.27L69.04-1.27Q69.72-1.27 71.26-1.64 72.8-2 72.94-2.44L72.94-2.44Q73.43-3.71 73.43-7.03L73.43-7.03 73.43-26.22Q73.43-28.61 73.09-29.88L73.09-29.88Q72.94-30.27 71.43-30.59 69.92-30.91 69.23-30.91L69.23-30.91Q69.04-30.91 69.04-31.52 69.04-32.13 69.23-32.32L69.23-32.32Q73.04-32.23 74.21-32.23L74.21-32.23Q76.75-32.23 78.12-32.32L78.12-32.32Q79.93-29 94.67-8.4L94.67-8.4Q94.82-9.23 94.82-10.4L94.82-10.4Z"
+                                                                                                                        opacity="1"
+                                                                                                                        transform="matrix(1,0,0,1,0,0)"
+                                                                                                                        fill="#DF6951"
+                                                                                                                        class="wordmark-text-0"
+                                                                                                                        data-fill-palette-color="primary"
+                                                                                                                        id="text-0">
+                                                                                                                    </path>
+                                                                                                                </svg>
+                                                                                                            </g>
+                                                                                                        </svg></g>
+                                                                                                </svg>
+                                                                                            </g>
+                                                                                        </svg></g>
+                                                                                </svg></g>
+                                                                        </svg></g>
+                                                                </svg></g>
+                                                            <g>
+                                                                <path
+                                                                    d="M245.816 0c68.262 0 123.6 55.338 123.6 123.6 0 68.262-55.338 123.6-123.6 123.6-50.632 0-94.154-30.445-113.257-74.026h3.961c18.867 41.53 60.709 70.409 109.296 70.409 66.265 0 119.983-53.718 119.983-119.983 0-66.265-53.718-119.983-119.983-119.983-48.587 0-90.428 28.88-109.296 70.409l-3.961 0c19.103-43.582 62.625-74.026 113.257-74.026z"
+                                                                    fill="#DF6951" stroke="transparent"
+                                                                    data-fill-palette-color="tertiary"></path>
+                                                            </g>
+                                                        </svg></g>
+                                                    <defs></defs>
+                                                </svg>
+                                                <rect width="395.52" height="247.2" fill="#DF6951" stroke="none"
+                                                    visibility="hidden"></rect>
+                                            </g>
+                                        </svg></g>
+                                </svg>
+                            </div>
+                            <p class="footer-brand-about">Travel helps companies manage payments easily.</p>
+                            <ul class="footer__contact-list">
+                                <li class="footer__contact-item">
+                                    <i class="footer__contact-item-icon fa-brands fa-linkedin-in"></i>
+                                </li>
+                                <li class="footer__contact-item">
+                                    <i class="footer__contact-item-icon fa-brands fa-facebook-messenger"></i>
+                                </li>
+                                <li class="footer__contact-item">
+                                    <i class="footer__contact-item-icon fa-brands fa-twitter"></i>
+                                </li>
+                                <li class="footer__contact-item">
+                                    <i class="footer__contact-item-icon fa-brands fa-instagram"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <div class="footer__column">
+                            <h3 class="footer__title">Company</h3>
+                            <ul class="footer__list">
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">About Us</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">About Us</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">About Us</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">About Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <div class="footer__column">
+                            <h3 class="footer__title">Destinations</h3>
+                            <ul class="footer__list">
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">Maldives</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">Maldives</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">Maldives</a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-item-link">Maldives</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-4-8">
+                        <div class="footer__column__form">
+                            <h3 class="footer__title">Join Our Newsletter</h3>
+                            <div class="footer__form">
+                                <input type="text" placeholder="Your email address" class="footer__form-input">
+                                <button class="footer__form-button btn btn--primary">Subscribe</button>
+                            </div>
+                            <ul class="footer__form-list">
+                                <li class="footer__form-list-item">
+                                    <span class="footer__form-list-item-text">* Will send you weekly updates for your
+                                        better
+                                        tour packages.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="grid">
+                    <p class="footer-copyright">Copyright TDN Corp. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
