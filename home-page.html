@@ -14,10 +14,11 @@
 </head>
 
 <body>
+
     <header class="home-header">
         <div class="wrapper">
-            <div class="grid">
-                <div class="header-container">
+            <div class="nav-wrapper">
+                <div class="grid">
                     <div class="header__navbar">
                         <div class="header__navbar-logo">
                             <svg class="header__logo-img" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -91,7 +92,7 @@
                         </div>
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item">
-                                <a href="" class="header__navbar-item-link header__navbar-link--active">Trang chủ</a>
+                                <a href="" class="header__navbar-item-link">Trang chủ</a>
                             </li>
                             <li class="header__navbar-item">
                                 <a href="" class="header__navbar-item-link">Giới thiệu về nav</a>
@@ -120,9 +121,19 @@
                             <li class="header__navbar-item">
                                 <a href="" class="header__navbar-item-link">Xem thêm</a>
                             </li>
+                            <li class="header__navbar-item">
+                                <span class="header__navbar-item-link header__navbar-item-link--register">Đăng ký</span>
+                            </li>
+                            <li class="header__navbar-item">
+                                <span class="header__navbar-item-link header__navbar-item-link--login">Đăng nhập</span>
+                            </li>
                         </ul>
                         <button class="btn btn--primary">Liên hệ</button>
                     </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="header-container">
                     <div class="header-hero">
                         <div class="header-hero__label">
                             <p>No matter where</p>
@@ -702,7 +713,7 @@
     <div class="modal">
         <div class="modal__overlay"></div>
         <div class="modal__body">
-            <form id="login-form" class="auth-form">
+            <form id="register-form" class="auth-form">
                 <i class="auth-form__close fa-solid fa-xmark"></i>
                 <div class="auth-form__header">
                     <h3 class="auth-form__heading">Đăng ký</h3>
@@ -712,8 +723,8 @@
                     <div class="auth-form__group">
                         <div class="auth-form__box">
                             <label for="fullname" class="auth-form__label">Họ và tên</label>
-                            <input id="fullname" type="text" rules="required" name="fullname" placeholder="Vd: Nguyễn Văn A"
-                                class="auth-form__input">
+                            <input id="fullname" type="text" rules="required" name="fullname"
+                                placeholder="Vd: Nguyễn Văn A" class="auth-form__input">
                         </div>
                         <span class="auth-form__message"></span>
                     </div>
@@ -731,16 +742,15 @@
                     <div class="auth-form__group">
                         <div class="auth-form__box">
                             <label for="email" class="auth-form__label">Email</label>
-                            <input id="email" type="text" rules="required|email" name="email" placeholder="Vd: abcd@gmail.com"
-                                class="auth-form__input">
+                            <input id="email" type="text" rules="required|email" name="email"
+                                placeholder="Vd: abcd@gmail.com" class="auth-form__input">
                         </div>
                         <span class="auth-form__message"></span>
                     </div>
                     <div class="auth-form__group">
                         <div class="auth-form__box">
                             <label for="province" class="auth-form__label">Tỉnh/TP</label>
-                            <select id="province"  name="province"
-                                class="auth-form__input">
+                            <select id="province" name="province" class="auth-form__input">
                                 <option value="">-- Chọn Tỉnh/TP --</option>
                                 <option value="hcm">Hồ Chí Minh</option>
                                 <option value="hni">Hà Nội</option>
@@ -752,28 +762,52 @@
                     <div class="auth-form__group">
                         <div class="auth-form__box">
                             <label for="avatar" class="auth-form__label">Tải ảnh đại diện</label>
-                            <input id="avatar" type="file" name="avatar"
-                                class="auth-form__input">
+                            <input id="avatar" type="file" name="avatar" class="auth-form__input">
                         </div>
                         <span class="auth-form__message"></span>
                     </div>
                     <div class="auth-form__group">
                         <div class="auth-form__box">
                             <label for="password" class="auth-form__label">Mật khẩu</label>
-                            <input id="password" type="password" rules="required|minLength:6" name="password" placeholder="Nhập mật khẩu"
-                                class="auth-form__input">
+                            <input id="password" type="password" rules="required|minLength:6" name="password"
+                                placeholder="Nhập mật khẩu" class="auth-form__input">
                         </div>
                         <span class="auth-form__message"></span>
                     </div>
                     <div class="auth-form__group">
                         <div class="auth-form__box">
                             <label for="retype-password" class="auth-form__label">Nhập lại mật khẩu</label>
-                            <input id="retype-password" type="password" rules="required|confirm:#password" name="retype-password"
-                                placeholder="Nhập lại mật khẩu" class="auth-form__input">
+                            <input id="retype-password" type="password" rules="required|confirm:#password"
+                                name="retype-password" placeholder="Nhập lại mật khẩu" class="auth-form__input">
                         </div>
                         <span class="auth-form__message"></span>
                     </div>
                 </div>
+                <button class="auth-form__btn btn btn--primary">Đăng nhập</button>
+            </form>
+            <form id="login-form" class="auth-form">
+                <i class="auth-form__close fa-solid fa-xmark"></i>
+                <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng nhập</h3>
+                    <span class="auth-form__switch-btn">Đăng ký</span>
+                </div>
+                <div class="auth-form__group">
+                    <div class="auth-form__box">
+                        <label for="email" class="auth-form__label">Email</label>
+                        <input id="email" type="text" rules="required|email" name="email"
+                            placeholder="Vd: abcd@gmail.com" class="auth-form__input">
+                    </div>
+                    <span class="auth-form__message"></span>
+                </div>
+                <div class="auth-form__group">
+                    <div class="auth-form__box">
+                        <label for="password" class="auth-form__label">Mật khẩu</label>
+                        <input id="password" type="password" rules="required|minLength:6" name="password"
+                            placeholder="Nhập mật khẩu" class="auth-form__input">
+                    </div>
+                    <span class="auth-form__message"></span>
+                </div>
+
                 <button class="auth-form__btn btn btn--primary">Đăng nhập</button>
             </form>
         </div>

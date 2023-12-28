@@ -8,6 +8,7 @@
     left: 0;
     display: flex;
     animation: fadeIn 0.1s linear;
+    display: none;
 }
 
 .modal__overlay {
@@ -30,9 +31,13 @@
 
 .auth-form {
     position: relative;
-    display: flex;
     padding: 36px;
     flex-direction: column;
+    display: none;
+}
+
+.auth-form--active{
+    display: flex;
 }
 
 .auth-form__close{
