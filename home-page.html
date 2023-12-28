@@ -7,8 +7,9 @@
     <title>Tour Booking</title>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/home-page.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.5.1-web/css/all.min.css" class="">
-    <script src="./assets/test.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 
@@ -98,7 +99,7 @@
                             <li class="header__navbar-item header__navbar-item--has-service">
                                 <a href="" class="header__navbar-item-link">Dịch vụ</a>
                                 <i class="header__navbar-item-icon fa-solid fa-sort-down"></i>
-                                <!-- Service box menu -->
+
                                 <div class="service-box">
                                     <ul class="service-box-list">
                                         <li class="service-box-item">
@@ -698,6 +699,119 @@
             </div>
         </div>
     </div>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <form id="login-form" class="auth-form">
+                <i class="auth-form__close fa-solid fa-xmark"></i>
+                <div class="auth-form__header">
+                    <h3 class="auth-form__heading">Đăng ký</h3>
+                    <span class="auth-form__switch-btn">Đăng nhập</span>
+                </div>
+                <div class="auth-form__form">
+                    <div class="auth-form__group">
+                        <div class="auth-form__box">
+                            <label for="fullname" class="auth-form__label">Họ và tên</label>
+                            <input id="fullname" type="text" rules="required" name="fullname" placeholder="Vd: Nguyễn Văn A"
+                                class="auth-form__input">
+                        </div>
+                        <span class="auth-form__message"></span>
+                    </div>
+                    <div class="auth-form__group">
+                        <div class="auth-form__box">
+                            <label for="fullname" class="auth-form__label">Giới tính</label>
+                            <div>
+                                <input type="checkbox" value="male" name="gender" class="auth-form__input"> Nam
+                                <input type="checkbox" value="female" name="gender" class="auth-form__input"> Nữ
+                                <input type="checkbox" value="other" name="gender" class="auth-form__input"> Khác
+                            </div>
+                        </div>
+                        <span class="auth-form__message"></span>
+                    </div>
+                    <div class="auth-form__group">
+                        <div class="auth-form__box">
+                            <label for="email" class="auth-form__label">Email</label>
+                            <input id="email" type="text" rules="required|email" name="email" placeholder="Vd: abcd@gmail.com"
+                                class="auth-form__input">
+                        </div>
+                        <span class="auth-form__message"></span>
+                    </div>
+                    <div class="auth-form__group">
+                        <div class="auth-form__box">
+                            <label for="province" class="auth-form__label">Tỉnh/TP</label>
+                            <select id="province"  name="province"
+                                class="auth-form__input">
+                                <option value="">-- Chọn Tỉnh/TP --</option>
+                                <option value="hcm">Hồ Chí Minh</option>
+                                <option value="hni">Hà Nội</option>
+                                <option value="dan">Đà Nẵng</option>
+                            </select>
+                        </div>
+                        <span class="auth-form__message"></span>
+                    </div>
+                    <div class="auth-form__group">
+                        <div class="auth-form__box">
+                            <label for="avatar" class="auth-form__label">Tải ảnh đại diện</label>
+                            <input id="avatar" type="file" name="avatar"
+                                class="auth-form__input">
+                        </div>
+                        <span class="auth-form__message"></span>
+                    </div>
+                    <div class="auth-form__group">
+                        <div class="auth-form__box">
+                            <label for="password" class="auth-form__label">Mật khẩu</label>
+                            <input id="password" type="password" rules="required|minLength:6" name="password" placeholder="Nhập mật khẩu"
+                                class="auth-form__input">
+                        </div>
+                        <span class="auth-form__message"></span>
+                    </div>
+                    <div class="auth-form__group">
+                        <div class="auth-form__box">
+                            <label for="retype-password" class="auth-form__label">Nhập lại mật khẩu</label>
+                            <input id="retype-password" type="password" rules="required|confirm:#password" name="retype-password"
+                                placeholder="Nhập lại mật khẩu" class="auth-form__input">
+                        </div>
+                        <span class="auth-form__message"></span>
+                    </div>
+                </div>
+                <button class="auth-form__btn btn btn--primary">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+    <script src="./assets/test.js"></script>
+    <script src="./validator2.js"></script>
+    <script>
+        // Cách 1
+        // Validator({
+        //     form: '#login-form',
+        //     formGroupSelector: '.auth-form__group',
+        //     formBoxSelector: '.auth-form__box',
+        //     msgSelector: '.auth-form__message',
+        //     rules: [
+        //         Validator.isRequire('#fullname','Vui lòng nhập đầy đủ họ tên'),
+        //         Validator.isRequire('#email'),
+        //         Validator.isRequire('input[name="gender"]'),
+        //         Validator.isRequire('#province'),
+        //         Validator.isRequire('#avatar'),
+        //         Validator.isEmail('#email'),
+        //         Validator.minLength('#password',6),
+        //         Validator.isRequire('#retype-password'),
+        //         Validator.isConfirm('#retype-password',function () {
+        //             return document.querySelector('#login-form #password').value
+        //         }, 'Mật khẩu nhập lại không hợp lệ'),
+        //     ],
+        //     onSubmit: function(value) {
+        //         console.log(value)
+        //     }
+        // })
+
+        // Cách 2       
+        var registerForm = new Validator('#login-form');
+
+        registerForm.onSubmit = function (data) {
+            console.log(data)
+        }
+    </script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
     --black-color: #000;
     --text-color: #333;
     --text-color-secondary: #84829A;
+    --text-color-primary: #181E4B;
     --primary-color: #DF6951;
     --border-color: #dbdbdb;
     --growth-from: 0.7;
@@ -91,6 +92,12 @@ html {
     border-radius: 10px;
     border: none;
     color: var(--white-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #df6951d3
 }
 
 .btn--primary {
