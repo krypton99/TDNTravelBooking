@@ -1,0 +1,125 @@
+/* Product card */
+
+.product-card {
+    width: 100%;
+    padding: 26px;
+}
+
+.product-card__image {
+    width: 100%;
+    object-fit: contain;
+    margin: 0;
+}
+
+.product-card__info-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.product-card__info-item {}
+
+.product-card__info-icon {}
+
+.product-card__info-content {
+    font-size: 0.6em;
+    font-weight: 450;
+}
+
+.product-card__title {
+    margin: 26px 0 0px 20px;
+    font-size: 2em;
+    color: var(--text-color-primary);
+}
+
+.product-card__desc {
+    display: block;
+    margin: 26px 0 0px 20px;
+}
+
+.product-card__footer {
+    margin: 26px 0 0px 20px;
+    display: flex
+}
+
+.product-card__footer-price {
+    margin-right: 1em
+}
+
+.product-card__footer-star-icon {
+    color: var(--primary-color);
+}
+
+/* trip plan */
+.trip-plan {
+    padding: 40px;
+    background-color: #ededed;
+    margin: 0 2em;
+}
+
+.trip-plan__title {
+    font-size: 3em;
+    line-height: 1.4em;
+    text-align: center;
+    color: var(--text-color-primary);
+}
+
+.trip-plan__desc {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.trip-plan__input-list {
+    list-style: none;
+}
+
+.trip-plan__input-item {
+    display: flex;
+    margin: 12px 8px;
+    height: 76px;
+    background-color: var(--white-color);
+    justify-content: flex-start;
+}
+
+.trip-plan__input-icon {
+
+}
+
+.trip-plan__input-placeholder {
+    margin: auto 8px;
+    font-size: 1.2em;
+    color: var(--text-color-secondary);
+}
+
+.trip-plan__filter {
+    margin: 0 8px;
+    
+}
+
+.trip-plan__filter-header {
+    margin: 1em 0;
+}
+
+.trip-plan__filter-bar {
+    display: block;
+    width: 100%;
+    height: 2em;
+    background-color: var(--primary-color);
+}
+
+.trip-plan__filter-price {
+    display: block;
+    margin: 8px 0;
+    color: var(--text-color-primary);
+    font-weight: 450;
+}
+.trip-plan__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}

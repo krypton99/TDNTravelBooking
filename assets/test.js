@@ -178,17 +178,15 @@ function authControl(...selector) {
         var switchBtn = formElement.querySelector('.auth-form__switch-btn')
         authButton.onclick = e => {
             if (modal) {
-                console.log(switchBtn)
                 modal.style.display = 'flex'
                 formElement.classList.add('auth-form--active')
             }
             var overlay = modal.querySelector(".modal__overlay")
-            overlay.onclick = e => {
+            overlay.onclick = () => {
                 modal.style.display = 'none'
                 formElement.classList.remove('auth-form--active')
             }
         }
-
         if (switchBtn) {
             switchBtn.onclick = function (e) {
                 var otherForm;

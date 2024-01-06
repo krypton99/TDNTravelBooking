@@ -218,28 +218,8 @@ var headingElement = document.querySelector('h3')
 
 console.log(headingElement.style.fontSize)
 //Lưu ý: cách này chỉ lấy thuộc tính CSS inline của element
-var formElement = document.querySelector('.modal');
-var closeButton = formElement.querySelector('.auth-form__close')
-if (closeButton) {
-    console.log(closeButton)
-    closeButton.onclick = function (e) {
-        formElement.style.display = 'none'
-    }
-}
 
 
-var closeButton = formElement.querySelector('.auth-form__close')
-
-//Việc 1
-// Tham số thứ 1 truyền vào là event name, tham số thứ 2 là function
-closeButton.addEventListener('click', function () {
-    console.log('abc')
-})
-
-//Việc 2
-closeButton.addEventListener('click', function () {
-    console.log('Hello')
-})
 
 
 var users = [

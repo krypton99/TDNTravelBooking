@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src=""></script>
+    <style>
+        .btn {
+            border: 1px solid #3b3b3b;
+            box-shadow: 0 2px 10px #a1a1a1;
+            background-color: rgb(18, 207, 240);
+            line-height: 40px;
+            width: 100px;
+            color: #fff;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Input.js
+        function Input({ label, ...inputProps }) {
+            return (
+                <div className="input-container">
+                    <label htmlFor="input">{label}</label>
+                    <input {...inputProps}/>
+                </div>
+            )
+        }
+        // App.js
+        function App() {
+            return (
+                <div id="wrapper">
+                <Input 
+                    label = "fullname"
+                    placeholder = "Điền tên"
+                    type = "checkbox"
+                />
+                </div>
+            )
+        }
+
+        //React-DOM 18
+        const rootDOM = document.getElementById('root')
+        const rootReact = ReactDOM.createRoot(root)
+
+        rootReact.render(<App />)
+
+    </script>
+</body>
+
+</html>
